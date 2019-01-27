@@ -347,10 +347,6 @@ body .modal-backdrop {
       position: relative;
 }
 
-.modal-content textarea.form-control {
-    max-width: 100%;
-}
-
 .modal-content {
     display: inline-block;
     background-image: url(img/note.png);
