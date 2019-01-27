@@ -16,7 +16,7 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
 
 
@@ -28,7 +28,7 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <a href="https://www.motion-software.com" target="_blank"><h3>mNotes</h3></a>
+                <a href="https://www.motion-software.com" target="_blank"><h3>mNote</h3></a>
             </div>
 
             <ul class="list-unstyled components">
@@ -99,7 +99,7 @@
             <div class="container">
                 <!-- The Modal -->
               <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal">
-                  <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-dialog" role="document">
                       <div class="modal-content">
                           <!-- Modal Header -->
                         <div class="modal-header">
@@ -109,7 +109,7 @@
                     
                           <!-- Modal body -->
                         <div class="modal-body">              
-                            <textarea name="body" cols="60" rows="10" placeholder="Note"></textarea>
+                            <textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note"></textarea>
                             <br>
                             <input type="datetime" name="CreationDate" placeholder="Creation Date" value="Creation Date">
                             <input type="datetime" name="ExpirationDate" placeholder="Expiration Date" value="Expiration Date">
@@ -127,6 +127,7 @@
                 </div>
                 
               </div>
+              
               <div class="notes">
                 <ul>
                   <li>
@@ -187,10 +188,7 @@
             </div>
         </div>
     </div>
-       
             
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
