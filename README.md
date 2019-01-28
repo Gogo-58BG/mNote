@@ -4,9 +4,10 @@
 <p align="center"><b>mNote</b><br>
 <i>The Best Note Keeping Application</i></p>
 <p align="center">_______________________________________________________________________________________________</p>
-<p align="center"><b>Krasimir Kostov<br>Elena Avramova<br>Plamen Vladimirov<br>Nadezhda Metodieva<br>Georgi Angelov<br>Borislav Ivanchev<br>Andrei Kozarev<br>Ani Arsova<br></b>
+<p align="center"><b>Krasimir Kostov<br>Elena Avramova<br>Plamen Vladimirov<br>Nadezhda Metodieva<br>Georgi Angelov<br>Borislav Ivanchev<br>Andrei Kozarev<br>Ani Arsova</b></p><br>
  
 ## SRS Table of Contents
+
 - [1. **Introduction**](#1-introduction)
     - [1.1. **Purpose**](#11-purpose)
 	- [1.2. **Scope**](#12-scope)
