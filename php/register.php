@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,15 +8,15 @@
 </head>
 <body>
 <div class="bg-img">
-  <form action="login.php" class="container">
-  <h2 class="logo">mNotes</h2>
+  <form action="login.php" class="container" method="post">
+  <h2 class="logo">mNote</h2>
     <h1>Register</h1>
-    </br>
+</br>
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <label for="pass"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pass" id="pass" required>
 
     <button type="submit" class="btn">Register</button>
   </form>
