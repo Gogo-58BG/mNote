@@ -87,6 +87,8 @@ a, a:hover, a:focus {
     border-bottom: 1px solid #47748b;
 }
 
+#sidebar ul li a { color: #fff; }
+
 #sidebar ul p {
     color: #fff;
     padding: 10px;
