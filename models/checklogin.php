@@ -12,11 +12,8 @@ $pass = stripslashes($pass);
 //$email = mysql_real_escape_string($email);
 //$pass = mysql_real_escape_string($pass);
 
-// TODO: password_hash("admin", PASSWORD_BCRYPT)
-// $bcryptPassword = password_hash($pass, PASSWORD_BCRYPT);
-
-//$encrypted_password=md5($pass);
-$sql="SELECT * FROM $tbl_name WHERE email='$email' and pass='$pass'"; //$encrypted_password
+$encrypted_password=md5($pass);
+$sql="SELECT * FROM $tbl_name WHERE email='$email' and pass='$encrypted_password'"; //$encrypted_password
 
 if (mysqli_query($db, $sql)) {
 	$result = mysqli_query($db, $sql);
