@@ -1,4 +1,15 @@
 <?php include('header.php'); ?>
+
+<?php
+	if (isset($_GET['login']) && $_GET['login'] === 'false') {
+		?>
+			<div class="alert alert-danger" role="alert">
+				Wrong Email or Password
+			</div>
+		<?php
+	}
+?>
+
 <div class="bg-img">
   <form action="models/checklogin.php" method="post" class="container">
   <h2 class="logo">mNote</h2>
