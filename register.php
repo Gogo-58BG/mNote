@@ -1,3 +1,5 @@
+<!-- TODO: confirm password -->
+
 <?php include('header.php'); ?>
 <div class="bg-img">
   <form action="models/registration.php" class="container" method="post">
