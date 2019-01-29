@@ -11,7 +11,7 @@
 ?>
 
 <div class="bg-img">
-  <form action="models/checklogin.php" method="post" class="container">
+  <form action="models/checklogin.php" method="post" class="container-login">
   <h2 class="logo">mNote</h2>
     <h1>Login</h1>
 	</br>

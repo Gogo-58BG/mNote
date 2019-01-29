@@ -20,11 +20,11 @@ $email = stripslashes($email);
 $pass = stripslashes($pass);
 
 // TODO: password_hash("admin", PASSWORD_BCRYPT)
-$bcryptPassword = password_hash($pass, PASSWORD_BCRYPT);
+$encrypted_password=md5($pass);
 
 if (isset($_POST['email']) && isset($_POST['pass'])){
 
-$sql = "INSERT INTO `users` (email, pass) VALUES ('$email', '$bcryptPassword')";
+$sql = "INSERT INTO `users` (email, pass) VALUES ('$email', '$encrypted_password')";
 	$result = mysqli_query($db, $sql);
 	if($result){
 		$smsg = "User Created Successfully.";

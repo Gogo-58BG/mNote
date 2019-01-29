@@ -19,16 +19,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                
-          </div>
-          <form class="navbar-form" role="search">
-              <div class="input-group">
-                  <input type="text" class="form-control" placeholder="search" name="q">
-                  <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                  </div>
-              </div>
-          </form>    
+          </div>   
         </nav>
         
         <div class="container">
