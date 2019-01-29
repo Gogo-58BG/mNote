@@ -6,8 +6,12 @@
 <p align="center">_______________________________________________________________________________________________</p>
 <p align="center"><b>Krasimir Kostov<br>Elena Avramova<br>Plamen Vladimirov<br>Nadezhda Metodieva<br>Georgi Angelov<br>Borislav Ivanchev<br>Andrei Kozarev<br>Ani Arsova</b></p><br>
  
+ 
 ## SRS Table of Contents
 
+<details>
+<summary>Click to expand</summary>
+	
 - [1. **Introduction**](#1-introduction)
     - [1.1. **Purpose**](#11-purpose)
 	- [1.2. **Scope**](#12-scope)
@@ -46,6 +50,7 @@
 	- [5.3. **Security Requirements**](#53-security-requirements)    
 	- [5.4. **Software Quality Atributes**](#54-software-quality-atributes)
 - [6. **Other Requirements**](#6-other-requirements)								
+</details>
 
 ## 1. **Introduction**
 This section gives a scope description and overview of this Software Requirements Specification (SRS). 
