@@ -12,6 +12,7 @@ $pass = stripslashes($pass);
 //$email = mysql_real_escape_string($email);
 //$pass = mysql_real_escape_string($pass);
 
+// TODO: change to password_hash
 $encrypted_password=md5($pass);
 $sql="SELECT * FROM $tbl_name WHERE email='$email' and pass='$encrypted_password'"; //$encrypted_password
 
@@ -26,9 +27,8 @@ if (mysqli_query($db, $sql)) {
 		var_dump($table);
 		die();
 	}
-	var_dump($error);
-	die();
 }
+
 
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
@@ -39,15 +39,15 @@ if($count==1) {
     $_SESSION['email'] = $email;
 } else {
 	//If the login credentials doesn't match, he will be shown with an error message.
-	$msg = "Wrong Email or Password";
+	header("location: ../login.php?login=false");
 }
 
 if (isset($_SESSION['email'])){
-        $email = $_SESSION['email'];
-        header("location: ../index.php");
+    $email = $_SESSION['email'];
+    header("location: ../index.php");
 }
 else {
-	header("location:register.php");
+	header("location: ../login.php?login=false");
 	echo "Wrong Username or Password";
 }
 ?>

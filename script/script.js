@@ -23,4 +23,12 @@ $(document).ready(function () {
     $('textarea').on('input, keyup', function () {
         setHeight(this);
    })
+
+    // Modal functionality
+    $('.note').on("click", function() {
+        $('#myModal .modal-header input').val($(this).find('h2').html());
+        $('#myModal .modal-body textarea').val($(this).find('p').html());
+        // TODO: Add value of the id to hidden input
+        // TODO: Get dates
+    });
 });

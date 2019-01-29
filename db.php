@@ -1,6 +1,6 @@
 <?php
 
-include('config/db.simple.php');
+include('config/db.php');
 
 //Datebase
 $servername = DB_HOST;
