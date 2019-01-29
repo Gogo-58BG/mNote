@@ -52,10 +52,10 @@
 - [6. **Other Requirements**](#6-other-requirements)								
 </details>
 
-## 1. **Introduction**
+## 1. Introduction
 This section gives a scope description and overview of this Software Requirements Specification (SRS). 
 
-### 1.1. **Purpose**
+### 1.1. Purpose
 The purpose of this document is to give a detailed description of the requirements for the “mNotes“ software. It will describe the required features and functionality for the development of system. This document is primarily intended to be proposed to a customer for its approval and a reference for developing the first version of the system for the development team.
 
 ### 1.2. Scope
