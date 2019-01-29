@@ -72,43 +72,16 @@
           
           <div class="notes">
             <ul>
-              <li>
-                <a href="1" data-toggle="modal" data-target="#myModal" class="note">
-                  <h2>Title #1</h2>
-                  <p>Text Content #1</p>
-                </a>
-              </li>
-              <li>
-                <a href="2" data-toggle="modal" data-target="#myModal" class="note">
-                  <h2>Title 2222222222222222</h2>
-                  <p>Text Content #1</p>
-                </a>
-              </li>
-              <li>
-                <a href="3" data-toggle="modal" data-target="#myModal" class="note">
-                  <h2>Title 333333333333333</h2>
-                  <p>Text Content #1</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <h2>Title #2</h2>
-                  <p>Text Content #2</p>
-                </a>
-              </li>
+			<?php foreach ($notes as $note){ ?>
+            
+				<li>
+                <a href="<?php echo $note[0]?>" data-toggle="modal" data-target="#myModal">
+                 <h2><?php echo $note[2]?></h2>
 
-              <li>
-                <a href="#">
-                  <h2>Title #7</h2>
-                  <p>Text Content #7</p>
+                  <p><?php echo $note[3]?></p>
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <h2>Title #8</h2>
-                  <p>Text Content #8</p>
-                </a>
-              </li>
+			  <?php } ?>             
             </ul>
         </div>
     </div>
