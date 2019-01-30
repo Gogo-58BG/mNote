@@ -4,7 +4,13 @@
 	if (isset($_GET['login']) && $_GET['login'] === 'false') {
 		?>
 			<div class="alert alert-danger" role="alert">
-				Wrong Email or Password
+			"User Created Successfully."
+			</div>
+		<?php
+	} else if (isset($_GET['login']) && $_GET['login'] === 'email') {
+		?>
+			<div class="alert alert-danger" role="alert">
+			"Your email is not valid."
 			</div>
 		<?php
 	}

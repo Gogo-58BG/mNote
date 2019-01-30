@@ -7,28 +7,33 @@ $pass=$_POST['pass'];
 
 // Remove all illegal characters from email
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+$valid=false;
 
 // Validate e-mail
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo("$email is a valid email address");
+	$valid=true;
 } else {
-    echo("$email is not a valid email address");
+	header("location: ../login.php?login=email");
 }
 
 // To protect MySQL injection (more detail about MySQL injection)
 $email = stripslashes($email);
 $pass = stripslashes($pass);
 
-// TODO: password_hash("admin", PASSWORD_BCRYPT)
+
 $encrypted_password=md5($pass);
 
-if (isset($_POST['email']) && isset($_POST['pass'])){
+if (isset($_POST['email']) && isset($_POST['pass']) && $valid){
 
-$sql = "INSERT INTO `users` (email, pass) VALUES ('$email', '$encrypted_password')";
+
 	$result = mysqli_query($db, $sql);
+
 	if($result){
-		$smsg = "User Created Successfully.";
-	}else{
+		$smsg = "User Created Successfully."; 
+		session_start();
+		$_SESSION['email'] = $email;
+		header("location: ../index.php");
+	} else {
 		$fmsg ="User Registration Failed";
 	}
 }
