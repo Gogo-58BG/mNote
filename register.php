@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <div class="bg-img">
-  <form action="models/registration.php" class="container" method="post">
+  <form action="models/registration.php" class="container-login" method="post">
   <h2 class="logo">mNote</h2>
     <h1>Register</h1>
 </br>

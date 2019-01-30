@@ -27,13 +27,12 @@ $email = stripslashes($email);
 $pass = stripslashes($pass);
 $pass1 = stripslashes($pass);
 
-// TODO: password_hash("admin", PASSWORD_BCRYPT) 
-//with PASSWORD_BCRYPT didn`t work.
+
 $encrypted_password=md5($pass);
 
 if (isset($_POST['email']) && isset($_POST['pass']) && $valid){
 
-	$sql = "INSERT INTO `users` (email, pass) VALUES ('$email', '$encrypted_password')";
+
 	$result = mysqli_query($db, $sql);
 
 	if($result){
