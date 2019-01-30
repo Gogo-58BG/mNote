@@ -24,8 +24,8 @@ if (mysqli_query($db, $sql)) {
 		$table = str_replace("Table 'mnotes.", "", $error);
 		$table = str_replace("' doesn't exist", "", $table);
 		// Create Users rable - Nice to have
-		var_dump($table);
-		die();
+		//var_dump($table);
+		//die();
 	}
 }
 
