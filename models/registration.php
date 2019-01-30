@@ -4,6 +4,8 @@ include('../db.php');
 
 $email=$_POST['email'];
 $pass=$_POST['pass'];
+$pass1=$_POST['pass1']
+
 
 // Remove all illegal characters from email
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -16,9 +18,14 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	header("location: ../login.php?login=email");
 }
 
+if $pass=$pass1 {
+	
+}
+
 // To protect MySQL injection (more detail about MySQL injection)
 $email = stripslashes($email);
 $pass = stripslashes($pass);
+$pass1 = stripslashes($pass);
 
 // TODO: password_hash("admin", PASSWORD_BCRYPT) 
 //with PASSWORD_BCRYPT didn`t work.
