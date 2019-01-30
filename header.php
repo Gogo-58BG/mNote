@@ -17,10 +17,9 @@
 
     <!-- Font Awesome JS -->
     <script defer src="script/solid.js"></script>
-    <script defer src="script/js/fontawesome.js"></script>
+    <script defer src="script/fontawesome.js"></script>
     <script src="script/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!-- <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css"> -->
 </head>
 
 <body>
