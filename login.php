@@ -17,8 +17,10 @@
 ?>
 
 <div class="bg-img">
-  <form action="models/checklogin.php" method="post" class="container-login">
-  <h2 class="logo">mNote</h2>
+	<form action="models/checklogin.php" method="post" class="container-login">
+	<a href="https://www.motion-software.com" target="_blank">
+		<img  class="logo" src="img/motion-logo.png" alt="Notes in Motion" title="Notes in Motion">
+	</a>
     <h1>Login</h1>
 	</br>
 	    <label for="email"><b>Email</b></label>
