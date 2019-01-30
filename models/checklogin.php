@@ -29,7 +29,6 @@ if (mysqli_query($db, $sql)) {
 	}
 }
 
-
 // Mysql_num_row is counting table row
 $count=mysqli_num_rows($result);
 
