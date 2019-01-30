@@ -28,6 +28,7 @@ $(document).ready(function () {
     $('.note').on("click", function() {
         $('#myModal .modal-header input').val($(this).find('h2').html());
         $('#myModal .modal-body textarea').val($(this).find('p').html());
+        $('#noteId') .val($(this).attr('href'));
         // TODO: Add value of the id to hidden input
         // TODO: Get dates
     });

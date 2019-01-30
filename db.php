@@ -8,6 +8,7 @@ $username = DB_USER;
 $password = DB_PASSWORD;
 $database = DB_NAME;
 $tbl_name="users"; // Table name
+$tbl_name1="notes";
 
 
 // Create connection
