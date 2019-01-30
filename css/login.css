@@ -19,6 +19,17 @@ background-size: auto;
 position: relative;
 }
 
+.container-login {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-top: 68px;
+  /*padding-bottom:20%;*/
+  position: relative;
+  text-align: center;
+  background-color: transperant;
+}
+
 
 /* Add styles to the form container */
 .container {
