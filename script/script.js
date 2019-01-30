@@ -31,4 +31,9 @@ $(document).ready(function () {
         // TODO: Add value of the id to hidden input
         // TODO: Get dates
     });
+ 
+    $( "#datepicker" ).datepicker({
+        format: 'dd/mm/yyyy'
+    });
+
 });
