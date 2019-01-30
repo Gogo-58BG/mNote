@@ -6,7 +6,7 @@
 
     <ul class="list-unstyled components">
         <li>
-            <a href="#"><i class="fas fa-sticky-note"></i> New Note</a>
+            <a href="$note" data-toggle="modal" data-target="#myModal" class="note">><i class="fas fa-sticky-note"></i> New Note</a>
         </li>
         <li>
             <a href="#sortSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-sort"></i> Sort Notes</a>
