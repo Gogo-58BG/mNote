@@ -12,7 +12,9 @@
 ?>
 <div class="bg-img">
   <form action="models/registration.php" class="container-login" method="post">
-  <h2 class="logo">mNote</h2>
+  <a href="https://www.motion-software.com" target="_blank">
+		<img  class="logo" src="img/motion-logo.png" alt="Notes in Motion" title="Notes in Motion">
+	</a>
     <h1>Register</h1>
 </br>
     <input type="email" placeholder="Enter Email" name="email" id="email" required>

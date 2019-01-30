@@ -2,7 +2,7 @@
     DEMO STYLE
 */
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
+@import 'https://fonts.googleapis.com/css?family=Reenie+Beanie';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -297,10 +297,14 @@ a.article, a.article:hover {
     font-size:140%;
     font-weight:bold;
     padding-bottom:10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 .notes ul li p{
     font-family:"Reenie Beanie",arial,sans-serif;
     font-size:180%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
 .notes ul li:nth-child(even) a{
