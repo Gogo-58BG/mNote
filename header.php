@@ -19,7 +19,7 @@
     <script defer src="script/solid.js"></script>
     <script defer src="script/fontawesome.js"></script>
     <script src="script/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script/jquery-ui.js"></script>
 </head>
 
 <body>

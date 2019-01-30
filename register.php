@@ -4,7 +4,7 @@
 <div class="bg-img">
   <form action="models/registration.php" class="container-login" method="post">
   <a href="https://www.motion-software.com" target="_blank">
-		<img  class="logo" src="img/motion-logo.png" alt="Notes in Motion" title="Notes in Motion">
+		<img  class="logo" src="css/img/motion-logo.png" alt="Notes in Motion" title="Notes in Motion">
 	</a>
     <h1>Register</h1>
 </br>
