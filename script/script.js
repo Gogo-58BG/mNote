@@ -30,10 +30,10 @@ $(document).ready(function () {
         $('#myModal .modal-body textarea').val($(this).find('p').html());
         $('#noteId') .val($(this).attr('href'));
         // TODO: Get dates
+        $('#datepicker').val();
     });
  
     $( "#datepicker" ).datepicker({
-        format: 'dd/mm/yyyy'
+        dateFormat: 'yy-mm-dd'
     });
-
 });

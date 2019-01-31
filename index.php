@@ -33,7 +33,9 @@
                         <input type="hidden" name="users_email" value="<?php echo $email ?>">
                         <input type="hidden" name="id" value="<?php echo $noteId ?>" id="noteId">
                       <div class="modal-header">
+
                          Title: <input type="text" name="title" placeholder="Title" value="Title" required>
+
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                   
@@ -41,7 +43,9 @@
                       <div class="modal-body">              
                           Note:<textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note" required></textarea>
                           <br>
-                          Set Expiration date:<input type="datetime" id="datepicker" name="expired">
+
+                          <input type="datetime" id="datepicker" placeholder="Expiration date" name="expired">
+
                       </div>
                         <!-- Modal footer -->
                       <div class="modal-footer">
