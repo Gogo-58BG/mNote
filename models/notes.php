@@ -2,48 +2,45 @@
     /**
      * On form submit.
      */
-    //nclude('./db.php');
-    //echo '<pre>';
-    //var_dump($db);
-    //die();
-    
-    if (!empty($_POST)) {
-        // echo '<pre>';
-        //var_dump($_POST);
-        // die();
-        if (!is_null($_POST["title"])) {
-            $title = $db->real_escape_string($_POST["title"]);
-        }
+    include_once('../db.php');
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+          }
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $title = test_input($_POST["title"]);
+            $body = test_input($_POST["body"]);
+            }  
+
+        if (!empty($_POST)) {
+            $expired = $_POST["date"];
+            $noteId = $_POST["id"];
+            //$created = $_POST["created"];
+            $email = $_POST["users_email"];
+     
         
-        //$title = $db->real_escqpe_string($_POST["title"]);
-        $body = $db->real_escape_string($_POST["body"]);
-        $created = date("Y-m-d H:i:s");;
-        $expired = $_POST["expired"];
-       // $deleted = $_POST["id"];
-        if ($id=true){
-            $sql = "    
-            UPDATE INTO 
-                notes (title, body, expired) 
-            VALUES 
-                ('$title', '$body', '$expired');
-        ";
+        if ($noteId !== "new_note"){
+            $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`expired`='$expired' WHERE `id`= $noteId";
+
         }
         else {
-        $sql = "    
-            INSERT INTO 
-                notes (title, body, expired) 
-            VALUES 
-                ('$title', '$body', '$expired');
-        ";
+            $sql = "INSERT INTO `notes`(`users_email`, `title`, `body`, `created`, `expired`, `trash`, `archived`) VALUES ('$email', '$title', '$body', '$created', '$expired', '$trash', '$archived');";
+            
          }   
         $resultNote = mysqli_query($db, $sql);
 
         if($resultNote) {
-            echo "<em>Note added successfully!</em>";
+            header("location: ../index.php");
         } else {
+            header("location: ../index.php");
             echo "Error: ";
             echo '<pre>';
             var_dump($resultNote);
             die();
         }
     }
+
+    

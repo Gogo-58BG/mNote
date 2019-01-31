@@ -30,26 +30,19 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <!-- Modal Header -->
-                        <!-- TODO: add hidden input for ID -->
-                        <!-- TODO: add hidden input for Email: $email -->
-                        <!--
-                          Example: <input type="hidden" name="mail" value="<?php //echo $email ?>">
-                          >>> $_POST['mail'] // user_email
-                        -->
-                        <input type="hidden" name="mail" value="<?php echo $email ?>">
-                        <input type="hidden" name="id" value="" id="noteId">
+                        <input type="hidden" name="users_email" value="<?php echo $email ?>">
+                        <input type="hidden" name="id" value="<?php echo $noteId ?>" id="noteId">
                       <div class="modal-header">
-                         Title: <input type="text" name="title" placeholder="Title" value="Title">
+                         Title: <input type="text" name="title" placeholder="Title" value="Title" required>
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                   
                       <!-- Modal body -->
                       <div class="modal-body">              
-                          Note:<textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note"></textarea>
+                          Note:<textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note" required></textarea>
                           <br>
-                          Set Expiration date:<input type="datetime" id="datepicker" name="date">
+                          Set Expiration date:<input type="datetime" id="datepicker" name="expired">
                       </div>
-                      <!-- TODO: Submit -->
                         <!-- Modal footer -->
                       <div class="modal-footer">
                         <input type="submit" value="Save"> 
