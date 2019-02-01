@@ -28,8 +28,9 @@ $(document).ready(function () {
     $('.note').on("click", function() {
         $('#myModal .modal-header input').val($(this).find('h2').html());
         $('#myModal .modal-body textarea').val($(this).find('p').html());
-        $('#noteId').val($(this).attr('href'));
-        $('#myModal .modal-body #datepicker').val($(this).find('.date').html());
+        $('#noteId') .val($(this).attr('href'));
+        // TODO: Get dates
+        $('#datepicker').val();
     });
  
     $( "#datepicker" ).datepicker({

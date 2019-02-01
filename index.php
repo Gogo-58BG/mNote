@@ -43,7 +43,9 @@
                       <div class="modal-body">              
                           Note:<textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note" required></textarea>
                           <br>
+
                           <input type="datetime" id="datepicker" placeholder="Expiration date" name="expired">
+
                       </div>
                         <!-- Modal footer -->
                       <div class="modal-footer">
@@ -66,8 +68,6 @@
                     <h2><?php echo $note[2]?></h2>
 
                     <p><?php echo $note[3]?></p>
-
-                    <div style="display:none" class="date"><?php echo $note[5]?></div>
                   </a>
                 </li>
               <?php } ?>             
