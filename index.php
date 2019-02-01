@@ -24,7 +24,7 @@
         
         <div class="container">
             <!-- The Modal -->
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal">
+          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal">
               <!-- TODO: Form <form> element is missing -->
               <form action="models/notes.php" method="POST" id="form">
                 <div class="modal-dialog" role="document">

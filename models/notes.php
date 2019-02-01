@@ -51,6 +51,12 @@
     }
 
 
+    if (checkdate($month, $day, $year) === false) {
+        $validate['status'] = false;
+        $validate['message'] = 'Please enter correct date!';
+    }
+    
+
     if ($noteId !== "new_note"){
         $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`created`='$created',`expired`='$expired' WHERE `id`= $noteId";
     } else {

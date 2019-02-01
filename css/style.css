@@ -365,3 +365,13 @@ body .modal-backdrop {
     outline: 0;
     padding: 30px 30px 40px 20px;
 }  
+
+.modal-header {
+    margin: 0 auto;
+    display: flow-root;
+    text-align: center;
+}
+
+.modal-body {
+    text-align: right;
+}
