@@ -46,7 +46,7 @@ if (!empty($_POST)) {
 
     if (checkdate($month, $day, $year) === false) {
         $validate['status'] = false;
-        $validate['message'] = 'Note cannot be more than 1000 symbols!';
+        $validate['message'] = 'Please enter valid date!';
     }
 
     if ($noteId !== "new_note"){
