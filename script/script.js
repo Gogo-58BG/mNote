@@ -20,19 +20,22 @@ $(document).ready(function () {
         input.style.height = `${ input.scrollHeight + 2 }px`;
     };
     
-   // $('textarea').on('input, keyup', function () {
-   //     setHeight(this);
-  // })
+    // $('textarea').on('input, keyup', function () {
+    //     setHeight(this);
+    // })
 
     // Modal functionality
     $('.note').on("click", function() {
         $('#myModal .modal-header input').val($(this).find('h2').html());
         $('#myModal .modal-body textarea').val($(this).find('p').html());
-
         $('#noteId').val($(this).attr('href'));
+        $('#myModal #deleteNote').attr('href', 'models/deleteNote.php?noteId=' + $(this).attr('href'));
         $('#myModal .modal-body #datepicker').val($(this).find('.date').html());
         $('#myModal .modal-body #created').val($(this).find('.created').html());
 
+        if ($(this).attr('href') === 'new_note') {
+            $('#myModal #deleteNote').parent().hide();
+        }
     });
  
     $( "#datepicker" ).datepicker({

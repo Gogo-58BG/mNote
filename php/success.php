@@ -8,7 +8,7 @@
 	} else if (isset($_GET['login']) && $_GET['login'] === 'false') {
 		?>
 			<div class="alert alert-danger" role="alert">
-			"User registration failed."
+				"User registration failed."
 			</div>
 		<?php
 	}

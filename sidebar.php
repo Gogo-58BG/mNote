@@ -7,7 +7,6 @@
     <ul class="list-unstyled components">
         <li>
             <a href="new_note" data-toggle="modal" data-target="#myModal" class="note"><i class="fas fa-sticky-note"></i> New Note</a>
-
         </li>
         
         <li>
