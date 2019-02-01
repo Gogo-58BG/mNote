@@ -2,10 +2,6 @@
     /**
      * On form submit.
      */
-<<<<<<< HEAD
-=======
-
->>>>>>> 722b1ed91fb72bd20bda0cf9b0cc396dc159022d
     include_once('../db.php');
 
         function test_input($data) {
@@ -19,6 +15,13 @@
             $body = test_input($_POST["body"]);
             }  
 
+    $title = test_input($_POST["title"]);
+    $body = test_input($_POST["body"]);
+    $expired = $_POST["expired"];
+    $noteId = $_POST["id"];
+    $created = date("Y-m-d");
+    $email = $_POST["users_email"];
+
         if (!empty($_POST)) {
             $expired = $_POST["expired"];
             $noteId = $_POST["id"];
@@ -28,27 +31,34 @@
         
         if ($noteId !== "new_note"){
             $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`expired`='$expired' WHERE `id`= $noteId";
-<<<<<<< HEAD
-=======
 
     if ($title === "") {
         $validate['status'] = false;
-        $validate['message'] = 'Title can not be empty!';
+        $validate['message'] = 'Title cannot be empty!';
     }
 
-    // TODO title less than 255 chars
-    // if ...
+    // title less than 255 chars
+    if (strlen($title) > 255) {
+        $validate['status'] = false;
+        $validate['message'] = 'Title cannot be more than 255 symbols!';
+    }
 
 
+    // body is less than 1000 chars
+    if (strlen($body) > 1000) {
+        $validate['status'] = false;
+        $validate['message'] = 'Note cannot be more than 1000 symbols!';
+    }
 
-    // TODO: body is less than 1000 chars
->>>>>>> 722b1ed91fb72bd20bda0cf9b0cc396dc159022d
 
-        }
-        else {
-            $sql = "INSERT INTO `notes`(`users_email`, `title`, `body`, `created`, `expired`, `trash`, `archived`) VALUES ('$email', '$title', '$body', '$created', '$expired', '$trash', '$archived');";
-            
-         }   
+    if ($noteId !== "new_note"){
+        $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`created`='$created',`expired`='$expired' WHERE `id`= $noteId";
+    } else {
+        $sql = "INSERT INTO `notes`(`users_email`, `title`, `body`, `created`, `expired`, `trash`, `archived`) VALUES ('$email', '$title', '$body', '$created', '$expired', '$trash', '$archived');";
+    }
+    
+    if ($validate['status']) {
+
         $resultNote = mysqli_query($db, $sql);
 
         if($resultNote) {
