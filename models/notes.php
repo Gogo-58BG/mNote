@@ -30,6 +30,30 @@ if (!empty($_POST)) {
      * body - 1000 max
      * date - valid date
      */
+
+    include_once('../db.php');
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+          }
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $title = test_input($_POST["title"]);
+            $body = test_input($_POST["body"]);
+            }  
+
+        if (!empty($_POST)) {
+            $expired = $_POST["expired"];
+            $noteId = $_POST["id"];
+            //$created = $_POST["created"];
+            $email = $_POST["users_email"];
+     
+        
+        if ($noteId !== "new_note"){
+            $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`expired`='$expired' WHERE `id`= $noteId";
+
     if ($title === "") {
         $validate['status'] = false;
         $validate['message'] = 'Title can not be empty!';
@@ -37,6 +61,7 @@ if (!empty($_POST)) {
 
     // TODO title less than 255 chars
     // if ...
+
 
 
     // TODO: body is less than 1000 chars
