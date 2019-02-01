@@ -16,7 +16,7 @@
             }  
 
         if (!empty($_POST)) {
-            $expired = $_POST["date"];
+            $expired = $_POST["expired"];
             $noteId = $_POST["id"];
             //$created = $_POST["created"];
             $email = $_POST["users_email"];
