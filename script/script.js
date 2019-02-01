@@ -30,6 +30,7 @@ $(document).ready(function () {
         $('#myModal .modal-body textarea').val($(this).find('p').html());
         $('#noteId').val($(this).attr('href'));
         $('#myModal .modal-body #datepicker').val($(this).find('.date').html());
+        $('#myModal .modal-body #created').val($(this).find('.created').html());
     });
  
     $( "#datepicker" ).datepicker({

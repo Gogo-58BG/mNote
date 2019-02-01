@@ -34,16 +34,17 @@
                         <input type="hidden" name="id" value="<?php echo $noteId ?>" id="noteId">
                       <div class="modal-header">
 
-                         Title: <input type="text" name="title" placeholder="Title" value="Title" required>
+                      <input type="text" name="title" placeholder="Title" value="Title" required>
 
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                   
                       <!-- Modal body -->
                       <div class="modal-body">              
-                          Note:<textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note" required></textarea>
+                      <textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note" required></textarea>
                           <br>
-                          <input type="datetime" id="datepicker" placeholder="Expiration date" name="expired">
+                          <div id="created" class="created"><?php echo date("Y-m-d")?></div>
+                          <input type="datetime" id="datepicker" placeholder="Expiration" name="expired">
                       </div>
                         <!-- Modal footer -->
                       <div class="modal-footer">
