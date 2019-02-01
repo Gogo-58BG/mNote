@@ -2,6 +2,10 @@
     /**
      * On form submit.
      */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 722b1ed91fb72bd20bda0cf9b0cc396dc159022d
     include_once('../db.php');
 
         function test_input($data) {
@@ -24,6 +28,21 @@
         
         if ($noteId !== "new_note"){
             $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`expired`='$expired' WHERE `id`= $noteId";
+<<<<<<< HEAD
+=======
+
+    if ($title === "") {
+        $validate['status'] = false;
+        $validate['message'] = 'Title can not be empty!';
+    }
+
+    // TODO title less than 255 chars
+    // if ...
+
+
+
+    // TODO: body is less than 1000 chars
+>>>>>>> 722b1ed91fb72bd20bda0cf9b0cc396dc159022d
 
         }
         else {
