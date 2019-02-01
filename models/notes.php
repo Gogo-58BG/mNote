@@ -42,7 +42,12 @@ if (!empty($_POST)) {
         $validate['message'] = 'Note cannot be more than 1000 symbols!';
     }
 
-    // TODO: date is valid date.
+    // date is valid date.
+
+    if (checkdate($month, $day, $year) === false) {
+        $validate['status'] = false;
+        $validate['message'] = 'Note cannot be more than 1000 symbols!';
+    }
 
     if ($noteId !== "new_note"){
         $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`created`='$created',`expired`='$expired' WHERE `id`= $noteId";
