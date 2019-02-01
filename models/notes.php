@@ -42,7 +42,11 @@ if (!empty($_POST)) {
     // TODO: body is less than 1000 chars
 
 
-    // TODO: date is valid date.
+    if (checkdate($month, $day, $year) === false) {
+        $validate['status'] = false;
+        $validate['message'] = 'Please enter correct date!';
+    }
+    
 
     if ($noteId !== "new_note"){
         $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`expired`='$expired' WHERE `id`= $noteId";

@@ -20,9 +20,9 @@ $(document).ready(function () {
         input.style.height = `${ input.scrollHeight + 2 }px`;
     };
     
-    $('textarea').on('input, keyup', function () {
-        setHeight(this);
-   })
+   // $('textarea').on('input, keyup', function () {
+   //     setHeight(this);
+  // })
 
     // Modal functionality
     $('.note').on("click", function() {

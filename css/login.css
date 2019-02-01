@@ -31,7 +31,7 @@ position: relative;
 }
 
 
-/* Add styles to the form container */
+/* Add styles to the form container 
 .container {
   max-width: 300px;
   margin: 0 auto;
@@ -39,7 +39,7 @@ position: relative;
   text-align: center;
   background-color: transperant;
 }
-
+*/
 
 /* Full-width input fields */
 input[type=email], input[type=password], input[type=password1] {
