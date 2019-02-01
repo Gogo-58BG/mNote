@@ -69,6 +69,7 @@
                     <h2><?php echo $note[2]?></h2>
 
                     <p><?php echo $note[3]?></p>
+                    <div style="display:none" class="date"><?php echo $note[5]?></div>
                   </a>
                 </li>
               <?php } ?>             
