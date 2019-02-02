@@ -65,7 +65,9 @@ if (!empty($_POST)) {
         $resultNote = mysqli_query($db, $sql);
         
         if($resultNote) {
-            header("location: ../index.php");
+            $validate['message'] = "Note created successfuly!";
+            header("location: ../index.php?success=" . $validate['message']);
+
         } else {
             $validate['status'] = false;
             $validate['message'] = mysqli_error($db);
