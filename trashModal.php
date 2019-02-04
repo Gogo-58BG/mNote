@@ -3,6 +3,7 @@
     <!-- TODO: Form <form> element is missing -->
     <form action="models/notes.php" method="POST" id="form">
         <div class="modal-dialog" role="document">
+        <div id="created" class="created">Created: <?php echo date("Y-m-d")?></div>
             <div class="modal-content">
                 <!-- Modal Header -->
                 <input type="hidden" name="users_email" value="<?php echo $email ?>">
@@ -14,7 +15,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <textarea name="body" class="form-control .col-xs-12 .col-sm-6 .col-lg-8" placeholder="Note" required rows="3" style="min-height: 100px;"></textarea>
-                    <div id="created" class="created"><?php echo date("Y-m-d")?></div>
+                   
                     <input type="datetime" id="datepicker" class="form-control" placeholder="Expiration" name="expired">
                 </div>
                 <!-- Modal footer -->
