@@ -357,7 +357,7 @@ body .modal-backdrop {
 
 .modal-content {
     display: inline-block;
-    background-image: url(img/note.png);
+    background-color: #FFFFCC;
     background-size: 100% 100%;
     background-repeat:no-repeat;
     min-height: 55px;
@@ -367,5 +367,5 @@ body .modal-backdrop {
 }  
 
 .modal-body {
-    text-align: right;
+    text-align: left;
 }
