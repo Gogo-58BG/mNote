@@ -2,13 +2,21 @@
 /**
  * On form submit.
  */
-include_once('../db.php');
+if (file_exists('../db.php')) {
+    include_once('../db.php');
+}
 
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
+}
+
+function validateDate($date, $format = 'Y-m-d')
+{
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) == $date;
 }
 
 if (!empty($_POST)) {
@@ -21,7 +29,7 @@ if (!empty($_POST)) {
     $body = test_input($_POST["body"]);
     $expired = $_POST["expired"];
     $noteId = $_POST["id"];
-    $created = date("Y-m-d");
+    $created = date("Y-m-d H:i:s");
     $email = $_POST["users_email"];
 
     if ($title === "") {
@@ -35,16 +43,14 @@ if (!empty($_POST)) {
         $validate['message'] = 'Title cannot be more than 255 symbols!';
     }
 
-
     // body is less than 1000 chars
     if (strlen($body) > 1000) {
         $validate['status'] = false;
         $validate['message'] = 'Note cannot be more than 1000 symbols!';
     }
 
-    // date is valid date.
-
-    if (checkdate($month, $day, $year) === false) {
+    // Date is in the right format
+    if (validateDate($expired) === false) {
         $validate['status'] = false;
         $validate['message'] = 'Please enter valid date!';
     }
@@ -52,7 +58,7 @@ if (!empty($_POST)) {
     if ($noteId !== "new_note"){
         $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`created`='$created',`expired`='$expired' WHERE `id`= $noteId";
     } else {
-        $sql = "INSERT INTO `notes`(`users_email`, `title`, `body`, `created`, `expired`, `trash`, `archived`) VALUES ('$email', '$title', '$body', '$created', '$expired', '$trash', '$archived');";
+        $sql = "INSERT INTO `notes`(`users_email`, `title`, `body`, `created`, `expired`) VALUES ('$email', '$title', '$body', '$created', '$expired');";
     }
     
     if ($validate['status']) {
@@ -61,14 +67,12 @@ if (!empty($_POST)) {
         if($resultNote) {
             header("location: ../index.php");
         } else {
-            header("location: ../index.php");
-            echo "Error: ";
-            echo '<pre>';
-            var_dump($resultNote);
-            die();
+            $validate['status'] = false;
+            $validate['message'] = mysqli_error($db);
         }
-    } else {
-        header("location: ../index.php?error=" . $validate['message']);
     }
 
+    if (!$validate['status']) {
+        header("location: ../index.php?error=" . $validate['message']);
+    }
 }

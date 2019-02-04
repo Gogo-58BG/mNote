@@ -14,7 +14,7 @@ $pass = stripslashes($pass);
 
 // TODO: change to password_hash
 $encrypted_password=md5($pass);
-$sql="SELECT * FROM $tbl_name WHERE email='$email' and pass='$encrypted_password'"; //$encrypted_password
+$sql = "SELECT * FROM $tbl_name WHERE email='$email' and pass='$encrypted_password'"; //$encrypted_password
 
 if (mysqli_query($db, $sql)) {
 	$result = mysqli_query($db, $sql);
@@ -24,8 +24,8 @@ if (mysqli_query($db, $sql)) {
 		$table = str_replace("Table 'mnotes.", "", $error);
 		$table = str_replace("' doesn't exist", "", $table);
 		// Create Users rable - Nice to have
-		//var_dump($table);
-		//die();
+		// var_dump($table);
+		// die();
 	}
 }
 

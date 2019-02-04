@@ -7,14 +7,13 @@
     <ul class="list-unstyled components">
         <li>
             <a href="new_note" data-toggle="modal" data-target="#myModal" class="note"><i class="fas fa-sticky-note"></i> New Note</a>
-
         </li>
         
         <li>
             <a href="#"><i class="fas fa-archive"></i> Arhived Notes</a>
         </li>
         <li>
-            <a href="#"><i class="fas fa-trash"></i> Trash</a>
+            <a href="trashIndex.php"><i class="fas fa-trash"></i> Trash</a>
         </li>
         <li>
             <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-cogs"></i>User Profile</a>
