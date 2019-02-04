@@ -30,6 +30,7 @@ $(document).ready(function () {
         $('#myModal .modal-body textarea').val($(this).find('p').html());
         $('#noteId').val($(this).attr('href'));
         $('#myModal #deleteNote').attr('href', 'models/deleteNote.php?noteId=' + $(this).attr('href'));
+        $('#myModal #trashNote').attr('href', 'models/trashNote.php?noteId=' + $(this).attr('href'));
         $('#myModal .modal-body #datepicker').val($(this).find('.date').html());
         $('#myModal .modal-body #created').val($(this).find('.created').html());
 

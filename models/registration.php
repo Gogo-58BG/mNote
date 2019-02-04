@@ -32,11 +32,11 @@ $encrypted_password=md5($pass);
 if (isset($_POST['email']) && isset($_POST['pass']) && $valid)
 $sql = "INSERT INTO `users` (email, pass) VALUES ('$email', '$encrypted_password')";
 
-	$result = mysqli_query($db, $sql);
+$result = mysqli_query($db, $sql);
 
-	if($result){
-		//$smsg = "User Created Successfully."; 
-		session_start();
-		$_SESSION['email'] = $email;
-		header("location: ../index.php?login=true");
-	} 
+if($result){
+	//$smsg = "User Created Successfully."; 
+	session_start();
+	$_SESSION['email'] = $email;
+	header("location: ../index.php?login=true");
+} 

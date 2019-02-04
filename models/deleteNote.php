@@ -33,8 +33,3 @@ if (isset($noteId)) {
 
 // TODO: Check and send Error if the not is not deleted and send to index.php if its successful
 // header("location: ../index.php?error=" . $validate['message']);
-
-
-
-
-
