@@ -1,8 +1,9 @@
+<?php include('auth.php'); ?>
 <?php include('db.php'); ?>
 
 <?php include('header.php'); ?>
 <!-- Return $email if the user have Session! -->
-<?php include('auth.php'); ?>
+
 
 <div class="wrapper">
     <?php include('sidebar.php'); ?>

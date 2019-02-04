@@ -37,6 +37,11 @@ $(document).ready(function () {
         if ($(this).attr('href') === 'new_note') {
             $('#myModal #deleteNote').parent().hide();
         }
+
+        if ($(this).attr('href') === 'new_note') {
+            $('#myModal #trashNote').parent().hide();
+        }
+
     });
  
     $( "#datepicker" ).datepicker({
@@ -46,4 +51,8 @@ $(document).ready(function () {
     $('.close').on("click", function() {
           window.location.href = 'index.php';
       });
+
+    $('.close1').on("click", function() {
+        window.location.href = 'trashIndex.php';
+    });
 });
