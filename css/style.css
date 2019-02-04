@@ -357,11 +357,11 @@ body .modal-backdrop {
 
 .modal-content {
     display: inline-block;
-    background-color:#ccccff;
+    background-color: #FFFFCC;
     outline: 0;
     padding: 30px 30px 40px 20px;
 }  
 
 .modal-body {
-    text-align: right;
+    text-align: left;
 }
