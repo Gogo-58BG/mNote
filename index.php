@@ -28,13 +28,27 @@
             <div class="notes">
                 <ul>
                     <?php foreach ($notes as $note) { ?>
-                    <li>
+                    <?php
+                        $bell = "";
+                        //$class = "";
+                        $date = new DateTime($note[5]);
+                        $date1=new DateTime();
+                        $interval = $date->diff($date1);
+                        
+                        //var_dump($interval->d);
+                        //die();
+                        if ($interval->d < 3) {
+                            $bell = '<i class="fas fa-bell" style="color:#5bc0de" aria-hidden="true"></i>';    
+                        } // TODO: get today
+                        // Compare today with $date // DateTime documentation
+                        // set class to red if date is today.
+
+                        //$bell = '<i class="fas fa-bell" aria-hidden="true"></i>';
+                    ?>
+                    <li> 
                         <a href="<?php echo $note[0] ?>" data-toggle="modal" data-target="#myModal" class="note">
-                            <h2><?php echo $note[2] ?></h2>
+                            <h2><?php echo $note[2] ?> <?php echo $bell; ?></h2>
                             <p><?php echo $note[3] ?></p>
-                            <?php 
-                            $date = new DateTime($note[5]);
-                            ?>
                             <div style="display:none" class="date"><?php echo $date->format('Y-m-d'); ?></div>
                         </a>
                     </li>   
