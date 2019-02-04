@@ -13,14 +13,16 @@ if (file_exists('../db.php')) {
 
 $noteId = $_GET["noteId"];
 
-//var_dump($noteId);
-//die();
+if (isset($noteId)) {
+    $validate = [
+        'message' => '',
+    ];
 
-//if (isset($noteId))
-//{
 $sql = "UPDATE `notes` SET `trash` = '1' WHERE `id`= '$noteId'";
-$result = mysqli_query ($db,$sql)
-or die ("You couldn’t execute query");
-//var_dump($sql);
-//die();
-header("Location: ../trashIndex.php");
+
+$result = mysqli_query ($db,$sql);
+    if($result){
+        $validate['message'] = "Note deleted forever!";
+        header("location: ../trashIndex.php?success1=" . $validate['message']);
+    }
+}
