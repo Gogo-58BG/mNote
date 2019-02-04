@@ -42,4 +42,8 @@ $(document).ready(function () {
     $( "#datepicker" ).datepicker({
         dateFormat: 'yy-mm-dd'
     });
+
+    $('.close').on("click", function() {
+          window.location.href = 'index.php';
+      });
 });
