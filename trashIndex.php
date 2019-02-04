@@ -26,20 +26,22 @@
             <?php include_once('models/getTrashNote.php'); ?>
             <div class="notes">
                 <ul>
-                    <?php foreach ($notes as $note){ ?>
+                    <?php foreach ($notes as $note) { ?>
                     <li>
-                        <a href="<?php echo $note[0]?>" data-toggle="modal" data-target="#myModal" class="note">
-                            <h2><?php echo $note[2]?></h2>
-                            <p><?php echo $note[3]?></p>
+                        <a href="<?php echo $note[0] ?>" data-toggle="modal" data-target="#myModal" class="note">
+                            <h2><?php echo $note[2] ?></h2>
+                            <p><?php echo $note[3] ?></p>
                             <?php
                             $date = new DateTime($note[5]);
                             ?>
                             <div style="display:none" class="date"><?php echo $date->format('Y-m-d'); ?></div>
                         </a>
                     </li>
-                    <?php } ?>
+                    <?php 
+                } ?>
                 </ul>
             </div>
         </div>
     </div>
-    <?php include('footer.php'); ?>
+</div>    
+<?php include('footer.php'); ?>
