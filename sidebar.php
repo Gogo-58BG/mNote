@@ -6,11 +6,10 @@
 
     <ul class="list-unstyled components">
         <li>
-            <a href="new_note" data-toggle="modal" data-target="#myModal" class="note"><i class="fas fa-sticky-note"></i> New Note</a>
+            <a href="index.php"><i class="fas fa-home"></i> Home</a>
         </li>
-        
         <li>
-            <a href="#"><i class="fas fa-archive"></i> Arhived Notes</a>
+            <a href="new_note" data-toggle="modal" data-target="#myModal" class="note"><i class="fas fa-sticky-note"></i> New Note</a>
         </li>
         <li>
             <a href="#"><i class="fas fa-trash"></i> Trash</a>

@@ -358,10 +358,6 @@ body .modal-backdrop {
 .modal-content {
     display: inline-block;
     background-color: #FFFFCC;
-    background-size: 100% 100%;
-    background-repeat:no-repeat;
-    min-height: 55px;
-    min-width: 300px;
     outline: 0;
     padding: 30px 30px 40px 20px;
 }  
