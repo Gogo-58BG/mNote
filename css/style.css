@@ -3,6 +3,7 @@
 */
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import 'https://fonts.googleapis.com/css?family=Reenie+Beanie';
+@import 'https://fonts.googleapis.com/css?family=Caveat';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -58,8 +59,8 @@ a, a:hover, a:focus {
 
 
 #sidebar {
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 222px;
+    max-width: 222px;
     background: #5BC0DE;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
@@ -296,17 +297,20 @@ a.article, a.article:hover {
     float:left;
   }
 .notes ul li h2{
-    font-size:140%;
+    font-family:"Caveat", cursive;
+    font-size:160%;
     font-weight:bold;
     padding-bottom:10px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 .notes ul li p{
-    font-family:"Reenie Beanie",arial,sans-serif;
-    font-size:180%;
+    font-family:"Caveat", cursive;
+    font-style: italic;
+    font-size:140%;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1em;
   }
   
 .notes ul li:nth-child(even) a{

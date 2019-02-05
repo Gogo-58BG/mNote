@@ -8,8 +8,9 @@ if (file_exists('../db.php')) {
 
 $noteId = $_GET["noteId"];
 
-if (isset($noteId)) {
+if (isset($noteId) && is_numeric($noteId) && ($noteId > 0)) {
     $validate = [
+        'status' => true,
         'message' => '',
     ];
 
@@ -23,9 +24,12 @@ if (isset($noteId)) {
         header("location: ../index.php?success=" . $validate['message']);
               
     }
+
+}  else {
+    $validate['status'] = false;
+    $validate['message'] = "Ne stava!!!";
+    header("location: ../index.php?error=" . $validate['message']);
 }
-
-
 // TODO: Execute SQL query to delete the note with <ID>
 //$sql = "UPDATE `notes` SET `deleted` = '1' WHERE `id`= 2";
 

@@ -24,7 +24,7 @@
         <div class="container">
             <?php include_once('modal.php') ?>
 
-            <?php include_once('models/get_notes.php'); ?>
+            <?php include('models/get_notes.php'); ?>
             <div class="notes">
                 <ul>
                     <?php foreach ($notes as $note) { ?>
@@ -38,7 +38,7 @@
                         //var_dump($interval->d);
                         //die();
                         if ($interval->d < 3) {
-                            $bell = '<i class="fas fa-bell" style="color:#5bc0de" aria-hidden="true"></i>';    
+                            $bell = '<i class="fas fa-bell" style="color:#5bc0de" aria-hidden="true"></i>' . '<font color="red"> Expired soon!</font>';    
                         } // TODO: get today
                         // Compare today with $date // DateTime documentation
                         // set class to red if date is today.
@@ -47,7 +47,8 @@
                     ?>
                     <li> 
                         <a href="<?php echo $note[0] ?>" data-toggle="modal" data-target="#myModal" class="note">
-                            <h2><?php echo $note[2] ?> <?php echo $bell; ?></h2>
+                            <div><?php echo $bell ?></div>
+                            <h2><?php echo $note[2] ?></h2>
                             <p><?php echo $note[3] ?></p>
                             <div style="display:none" class="date"><?php echo $date->format('Y-m-d'); ?></div>
                         </a>
