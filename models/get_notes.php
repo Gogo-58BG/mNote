@@ -11,4 +11,3 @@ $notes = [];
 if ($result) {
 	$notes = $result->fetch_all();
 }
-
