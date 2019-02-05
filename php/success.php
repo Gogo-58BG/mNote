@@ -35,7 +35,7 @@
 	if (isset($_GET['success1'])) {
 		?>
 			<div class="alert alert-success alert-dismissible" role="alert">
-				<a href="#" class="close1" data-dismiss="alert" aria-label="close">&times;</a>
+				<a href="#" class="close1" data-dismiss="alert" aria-label="close1">&times;</a>
 				<?php echo $_GET['success1']; 
 				?>
 			</div>
