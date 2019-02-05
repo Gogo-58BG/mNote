@@ -6,10 +6,16 @@ $email=$_POST['email'];
 $pass=$_POST['pass'];
 $pass1=$_POST['pass1'];
 
+$select = mysqli_query($db, "SELECT `email` FROM `users` WHERE `email` = '".$_POST['email']."'") or exit(mysqli_error($db));
+if(mysqli_num_rows($select)) {
+	header("location: ../register.php?login=email");
+}
+
 if($_POST['pass']!==$_POST['pass1']) {
     header("location: ../register.php?pass=false");
 	exit;
 }
+
 // Remove all illegal characters from email
 $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $valid=false;
