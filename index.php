@@ -38,7 +38,7 @@
                         //var_dump($interval->d);
                         //die();
                         if ($interval->d < 3) {
-                            $bell = '<i class="fas fa-bell" style="color:#5bc0de" aria-hidden="true"></i>' . '<font color="red"> Expiring soon!</font>';    
+                            $bell = '<i class="fas fa-bell" style="color:#5bc0de" aria-hidden="true"></i>' . '<font color="#5BC0DE" size="2"> Expiring soon!</font>';    
                         } // TODO: get today
                         // Compare today with $date // DateTime documentation
                         // set class to red if date is today.

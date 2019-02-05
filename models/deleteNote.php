@@ -27,7 +27,7 @@ if (isset($noteId) && is_numeric($noteId) && ($noteId > 0)) {
 
 }  else {
     $validate['status'] = false;
-    $validate['message'] = "Ne stava!!!";
+    $validate['message'] = "Oops! Something went wrong!";
     header("location: ../index.php?error=" . $validate['message']);
 }
 // TODO: Execute SQL query to delete the note with <ID>

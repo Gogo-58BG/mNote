@@ -21,6 +21,15 @@
 			</div>
 		<?php
 	}
+
+	if (isset($_GET['error1'])) {
+		?>
+			<div class="alert alert-danger" role="alert">
+				<a href="#" class="close1" data-dismiss="alert" aria-label="close1">&times;</a>
+				<?php echo $_GET['error1']; ?>
+			</div>
+		<?php
+	}
 	
 	if (isset($_GET['success'])) {
 		?>
