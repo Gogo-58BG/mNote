@@ -9,6 +9,14 @@
 			</div>
 		<?php
 	}
+ else if (isset($_GET['login']) && $_GET['login'] === 'email') {
+	?>
+		<div class="alert alert-danger" role="alert">
+		"Email already exists"
+		</div>
+		
+	<?php
+ }
 ?>
 <div class="bg-img">
   <form action="models/registration.php" class="container-login" method="post">
