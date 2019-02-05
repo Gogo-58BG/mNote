@@ -13,8 +13,9 @@ if (file_exists('../db.php')) {
 
 $noteId = $_GET["noteId"];
 
-if (isset($noteId)) {
+if (isset($noteId) && is_numeric($noteId) && ($noteId > 0)) {
     $validate = [
+        'status' => true,
         'message' => '',
     ];
 
@@ -25,4 +26,10 @@ $result = mysqli_query ($db,$sql);
         $validate['message'] = "Note deleted forever!";
         header("location: ../trashIndex.php?success1=" . $validate['message']);
     }
+
+}  else {
+    $validate['status'] = false;
+    $validate['message'] = "Oops! Something went wrong!";
+    header("location: ../trashIndex.php?error1=" . $validate['message']);
+   
 }
