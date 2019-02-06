@@ -64,7 +64,11 @@ if (!empty($_POST)) {
     if ($validate['status']) {
         $resultNote = mysqli_query($db, $sql);
         
-        if($resultNote) {
+        if($resultNote && '#edittrash' && $noteId !== "new_note") {
+            $validate['message'] = "Note edited successfuly!";
+            header("location: ../trashIndex.php?success1=" . $validate['message']);
+
+        } else if ($resultNote) {    
             $validate['message'] = "Note created successfuly!";
             header("location: ../index.php?success=" . $validate['message']);
 

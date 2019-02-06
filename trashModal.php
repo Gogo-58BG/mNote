@@ -23,7 +23,7 @@
                         <a href="" id="trashNote" class="btn btn-danger" style="background-color: #e64e5c;">Clear</a>
                     </div>
                     <div class="col-md-6">
-                        <input type="submit" value="Save" class="btn btn-success" style="background-color: #49c766">
+                        <input type="submit" value="Save" class="btn btn-success" id="edittrash" style="background-color: #49c766">
                     </div>
                 </div>
             </div>

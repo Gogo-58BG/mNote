@@ -43,7 +43,7 @@ if($count==1) {
 
 if (isset($_SESSION['email'])){
     $email = $_SESSION['email'];
-    header("location: ../index.php");
+    header("location: ../models/autodelete.php");
 }
 else {
 	header("location: ../login.php?login=false");
