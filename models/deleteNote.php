@@ -18,7 +18,7 @@ if (isset($noteId) && is_numeric($noteId) && ($noteId > 0)) {
     //var_dump($sql);
     //die();
 
-    $result = mysqli_query ($db,$sql);
+    $result = mysqli_query($db,$sql);
     if($result){
         $validate['message'] = "Note deleted successfuly!";
         header("location: ../index.php?success=" . $validate['message']);
