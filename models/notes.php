@@ -1,4 +1,5 @@
 <?php
+
 /**
  * On form submit.
  */
@@ -6,7 +7,8 @@ if (file_exists('../db.php')) {
     include_once('../db.php');
 }
 
-function test_input($data) {
+function test_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -55,29 +57,28 @@ if (!empty($_POST)) {
         $validate['message'] = 'Please enter valid date!';
     }
 
-    if ($noteId !== "new_note"){
+    if ($noteId !== "new_note") {
         $sql = "UPDATE `notes` SET `title`='$title',`body`='$body',`created`='$created',`expired`='$expired' WHERE `id`= $noteId";
     } else {
         $sql = "INSERT INTO `notes`(`users_email`, `title`, `body`, `created`, `expired`) VALUES ('$email', '$title', '$body', '$created', '$expired');";
     }
-    
+
     if ($validate['status']) {
         $resultNote = mysqli_query($db, $sql);
-        
-        //if($resultNote && $noteId !== "new_note") {
-        //    $validate['message'] = "Note edited successfuly!";
-        //    header("location: ../trashIndex.php?success2=" . $validate['message']);
 
-        } if ($resultNote) {    
+        if ($resultNote && $noteId !== "new_note") {
+            $validate['message'] = "Note edited successfuly!";
+            header("location: ../Index.php?success=" . $validate['message']);
+
+        } else if ($resultNote) {
             $validate['message'] = "Note created successfuly!";
             header("location: ../index.php?success=" . $validate['message']);
 
         } else {
             $validate['status'] = false;
             $validate['message'] = mysqli_error($db);
-        
+        }
     }
-
     if (!$validate['status']) {
         header("location: ../index.php?error=" . $validate['message']);
     }
