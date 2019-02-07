@@ -15,14 +15,10 @@
             <a href="trashIndex.php"><i class="fas fa-trash"></i> Trash</a>
         </li>
         <li>
-            <a href="#settingsSubmenu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-cogs"></i>User Profile</a>
-            <ul class="collapse list-unstyled" id="settingsSubmenu">
-            </ul>
+            <a href="editProfile.php"><i class="fas fa-cogs"></i>User Profile</a>
         </li>
         <li>
             <a href="./php/logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </li>
     </ul>
-
-</nav>
-    
+</nav> 

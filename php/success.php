@@ -30,6 +30,15 @@
 			</div>
 		<?php
 	}
+
+	if (isset($_GET['error2'])) {
+		?>
+			<div class="alert alert-danger" role="alert">
+				<a href="#" class="close2" data-dismiss="alert" aria-label="close2">&times;</a>
+				<?php echo $_GET['error2']; ?>
+			</div>
+		<?php
+	}
 	
 	if (isset($_GET['success'])) {
 		?>
@@ -46,6 +55,16 @@
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<a href="#" class="close1" data-dismiss="alert" aria-label="close1">&times;</a>
 				<?php echo $_GET['success1']; 
+				?>
+			</div>
+		<?php
+	}
+
+	if (isset($_GET['success2'])) {
+		?>
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<a href="#" class="close3" data-dismiss="alert" aria-label="close3">&times;</a>
+				<?php echo $_GET['success2']; 
 				?>
 			</div>
 		<?php

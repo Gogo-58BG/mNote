@@ -20,6 +20,7 @@ $(document).ready(function () {
         $('#myModal #deleteNote').attr('href', 'models/deleteNote.php?noteId=' + $(this).attr('href'));
         $('#myModal #trashNote').attr('href', 'models/trashNote.php?noteId=' + $(this).attr('href'));
         $('#myModal .modal-body #datepicker').val($(this).find('.date').html());
+        $('#myModal .modal-body #datepicker1').val($(this).find('.date').html());
         $('#myModal .modal-body #created').val($(this).find('.created').html());
 
         if ($(this).attr('href') === 'new_note') {
@@ -46,5 +47,13 @@ $(document).ready(function () {
 
     $('.close1').on("click", function() {
         window.location.href = 'trashIndex.php';
+    });
+
+    $('.close2').on("click", function() {
+        window.location.href = 'editProfile.php';
+    });
+
+    $('.close3').on("click", function() {
+        window.location.href = 'php/logout.php';
     });
 });
