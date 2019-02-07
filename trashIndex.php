@@ -1,8 +1,6 @@
-﻿<?php include('db.php'); ?>
-
-<?php include('header.php'); ?>
-<!-- Return $email if the user have Session! -->
 <?php include('auth.php'); ?>
+<?php include('db.php'); ?>
+<?php include('header.php'); ?>
 
 <div class="wrapper">
     <?php include('sidebar.php'); ?>
@@ -21,9 +19,8 @@
             </div>
         </nav>
         <div class="container">
-            <?php include_once('trashModal.php') ?>
-
-            <?php include_once('models/getTrashNote.php'); ?>
+            <?php include_once('trashModal.php'); ?>
+            <?php include('models/getTrashNote.php'); ?>
             <div class="notes">
                 <ul>
                     <?php foreach ($notes as $note) { ?>
@@ -43,5 +40,5 @@
             </div>
         </div>
     </div>
-</div>    
+</div>
 <?php include('footer.php'); ?>

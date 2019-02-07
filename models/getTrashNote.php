@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 //echo '<pre>';
 //var_dump($db);
 //die();

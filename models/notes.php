@@ -64,21 +64,21 @@ if (!empty($_POST)) {
     if ($validate['status']) {
         $resultNote = mysqli_query($db, $sql);
         
-        if($resultNote && '#edittrash' && $noteId !== "new_note") {
-            $validate['message'] = "Note edited successfuly!";
-            header("location: ../trashIndex.php?success1=" . $validate['message']);
+        //if($resultNote && $noteId !== "new_note") {
+        //    $validate['message'] = "Note edited successfuly!";
+        //    header("location: ../trashIndex.php?success2=" . $validate['message']);
 
-        } else if ($resultNote) {    
+        } if ($resultNote) {    
             $validate['message'] = "Note created successfuly!";
             header("location: ../index.php?success=" . $validate['message']);
 
         } else {
             $validate['status'] = false;
             $validate['message'] = mysqli_error($db);
-        }
+        
     }
 
     if (!$validate['status']) {
         header("location: ../index.php?error=" . $validate['message']);
     }
-}
+}   
