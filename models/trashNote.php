@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 
 if (file_exists('../db.php')) {
     include_once('../db.php');
@@ -31,5 +31,4 @@ $result = mysqli_query ($db,$sql);
     $validate['status'] = false;
     $validate['message'] = "Oops! Something went wrong!";
     header("location: ../trashIndex.php?error1=" . $validate['message']);
-   
 }
