@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
 
+    <link rel="stylesheet" href="css/all.css">
     <!-- Font Awesome JS -->
     <script defer src="script/solid.js"></script>
     <script defer src="script/fontawesome.js"></script>
+    <script src="script/jquery-3.1.1.js"></script>
     <script src="script/jquery.min.js"></script>
     <script src="script/jquery-ui.js"></script>
 </head>
