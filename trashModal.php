@@ -4,8 +4,8 @@
     <!-- TODO: Form <form> element is missing -->
     <form action="models/notes.php" method="POST" id="form">
         <div class="modal-dialog" role="document">
-            <div id="created" class="created">Created: <?php echo date("Y-m-d")?></div>
             <div class="modal-content">
+            <div id="created" class="created">Created: <?php echo date("Y-m-d")?></div>
                 <!-- Modal Header -->
                 <input type="hidden" name="users_email" value="<?php echo $email ?>">
                 <input type="hidden" name="id" value="" id="noteId">

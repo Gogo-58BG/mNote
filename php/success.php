@@ -1,7 +1,8 @@
 <?php
 	if (isset($_GET['login']) && $_GET['login'] === 'true') {
 		?>
-			<div class="alert alert-success" role="alert">
+			<div class="alert alert-success alert-dismissible" role="alert">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			"User Created Successfully."
 			</div>
 		<?php

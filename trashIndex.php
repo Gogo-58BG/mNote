@@ -3,7 +3,7 @@
 <?php include('header.php'); ?>
 
 <div class="wrapper">
-    <?php include('sidebar.php'); ?>
+    <?php include('trashSidebar.php'); ?>
     <?php include('models/notes.php'); ?>
 
     <!-- Page Content Holder -->
