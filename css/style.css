@@ -459,3 +459,7 @@ body .modal-backdrop {
 .form-control {
     display: inline;
 }
+
+.container-login svg {
+    color: #5BC0DE;
+}

@@ -41,7 +41,7 @@
     
     Password.defaults = {
         append: 'append',				// can be prepend or append
-        iconPrefix: 'fa',		
+        iconPrefix: 'fas',		
         iconShow: 'fa-eye',
         iconHide: 'fa-eye-slash',
         tooltip: 'Show/Hide password',
