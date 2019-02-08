@@ -2,21 +2,22 @@
 
 <?php include('header.php'); ?>
 <?php
-	if (isset($_GET['pass']) && $_GET['pass'] === 'false') {
-		?>
+if (isset($_GET['pass']) && $_GET['pass'] === 'false') {
+    ?>
 <div class="alert alert-danger" role="alert">
     "Password did not match."
 </div>
 <?php
-	}
- else if (isset($_GET['login']) && $_GET['login'] === 'email') {
-	?>
+
+} else if (isset($_GET['login']) && $_GET['login'] === 'email') {
+    ?>
 <div class="alert alert-danger" role="alert">
     "Email already exists"
 </div>
 
 <?php
- }
+
+}
 ?>
 <br />
 <div class="bg-img">
@@ -38,6 +39,9 @@
             data-toggle="password" required>
         <br />
         <button type="submit" class="btn">Register</button>
+        <br /> <br />
+        <p style="color: #5BC0DE;"> or <br /> <a href="login.php"><i class="fas fa-user"></i> Log in</a></p>
     </form>
 </div>
+
 <?php include('footer.php'); ?>
