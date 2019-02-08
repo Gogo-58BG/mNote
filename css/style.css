@@ -455,3 +455,7 @@ body .modal-backdrop {
 .close3:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
+
+.form-control {
+    display: inline;
+}
