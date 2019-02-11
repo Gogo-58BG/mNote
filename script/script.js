@@ -36,6 +36,10 @@ $(document).ready(function () {
         }
 
     });
+	
+	$.datepicker.setDefaults({
+		firstDay: 1
+	});
  
     $("#datepicker").datepicker({
         dateFormat: 'yy-mm-dd'
@@ -43,7 +47,7 @@ $(document).ready(function () {
 
     $('.close').on("click", function() {
           window.location.href = 'index.php';
-      });
+    });
 
     $('.close1').on("click", function() {
         window.location.href = 'trashIndex.php';
